@@ -1,0 +1,251 @@
+/* ط§ظ„ط®ظ„ظپظٹط© ظˆط§ظ„طھظ†ط³ظٹظ‚ ط§ظ„ط¹ط§ظ… */
+body {
+    margin: 0;
+    padding: 0;
+    background: #1e1e1e;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  /* ط§ظ„ظƒط¹ظƒط© */
+  .cake {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+  }
+  
+  /* ط§ظ„ط·ط¨ظ‚ط§طھ */
+  .layer {
+    width: 100px;
+    height: 20px;
+    background: #a0522d;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: dropLayer}
+  /* ط§ظ„ط®ظ„ظپظٹط© ظˆط§ظ„طھظ†ط³ظٹظ‚ ط§ظ„ط¹ط§ظ… */
+  body {
+    margin: 0;
+    padding: 0;
+    background: #1e1e1e;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  /* ط§ظ„ظƒط¹ظƒط© */
+  .cake {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+  }
+  
+  /* ط§ظ„ط·ط¨ظ‚ط§طھ */
+  .layer {
+    width: 100px;
+    height: 20px;
+    background: #a0522d;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: dropLayer 0.6s ease-out forwards;
+  }
+  
+  .layer-bottom {
+    background: #c2fdcf;
+    top: 60px;
+    animation-delay: 0.2s;
+  }
+  
+  .layer-middle {
+    top: 40px;
+    background: #ffd7f3;
+    animation-delay: 0.6s;
+  }
+  
+  .layer-top {
+    top: 20px;
+    background: #c4ddfa;
+    animation-delay: 1s;
+  }
+  
+  .icing {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 20px;
+    background: white;
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: dropLayer 0.6s ease-out forwards;
+    animation-delay: 1.4s;
+    z-index: 2;
+    overflow: visible;
+  }
+  
+  /* ظ‚ط·ط±ط§طھ ط§ظ„ظƒط±ظٹظ…ط© â€“ ط²ظƒط²ط§ظƒ ظ…طھط¯ط±ط¬ ط§ظ„ط·ظˆظ„ */
+  .drip {
+    position: absolute;
+    bottom: -10px;
+    width: 10px;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    animation: dropLayer 0.6s ease-out forwards;
+    animation-delay: 1.4s;
+  }
+  
+  .drip1 {
+    left: 5px;
+    height: 25px;
+  }
+  
+  .drip2 {
+    left: 20px;
+    height: 15px;
+  }
+  
+  .drip3 {
+    left: 40px;
+    height: 30px;
+  }
+  
+  .drip4 {
+    left: 60px;
+    height: 20px;
+  }
+  
+  .drip5 {
+    left: 80px;
+    height: 28px;
+  }
+  
+  /* ط§ظ„ط±ط³ط§ظ„ط© */
+  .message {
+    font-size: 20px;
+    color: #f5b942;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
+  }
+  
+  /* ط§ظ„ط§ط³ظ… */
+  .name {
+    font-size: 16px;
+    color: #d3cfcf;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2.8s;
+  }
+  
+  /* ط§ظ„ظ‚ظ„ظˆط¨ */
+  .heart {
+    display: inline-block;
+    font-size: 22px;
+    color: hotpink;
+    margin: 0 5px;
+    animation: shine 2s infinite ease-in-out;
+  }
+  
+  /* ط£ظ†ظٹظ…ظٹط´ظ† ط§ظ„ظ†ط²ظˆظ„ */
+  @keyframes dropLayer {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* ط£ظ†ظٹظ…ظٹط´ظ† ط§ظ„ط¸ظ‡ظˆط± */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* ط£ظ†ظٹظ…ظٹط´ظ† ط§ظ„ظ„ظ…ط¹ط§ظ† */
+  @keyframes shine {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+      text-shadow: 0 0 5px #fff, 0 0 10px hotpink;
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.2);
+      text-shadow: 0 0 2px #fff, 0 0 5px hotpink;
+    }
+  }
+
+.candle {
+  position: absolute;
+  top: -35px;
+  left: 45px;
+  width: 10px;
+  height: 30px;
+  background: #ff4d4d;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: candleAppear 0.6s ease-out forwards;
+  animation-delay: 3.2s; /* طھط£ط®ظٹط± ظ„طھط·ظ„ط¹ ط¢ط®ط± ط´ظٹط، */
+  z-index: 5;
+}
+
+.candle::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 2px;
+  width: 6px;
+  height: 10px;
+  background: gold;
+  border-radius: 50%;
+  box-shadow: 0 0 8px yellow;
+  animation: flameFlicker 0.6s infinite alternate;
+  opacity: 0;
+  animation-delay: 3.8s; /* ظٹط¸ظ‡ط± ط¨ط¹ط¯ ط§ظ„ط´ظ…ط¹ط© */
+  animation-fill-mode: forwards;
+}
+
+/* ط£ظ†ظٹظ…ظٹط´ظ† ط§ظ„ط´ظ…ط¹ط© */
+@keyframes candleAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+  /* ط­ط±ظƒط© ظ„ظ‡ط¨ ط§ظ„ط´ظ…ط¹ط© */
+  @keyframes flameFlicker {
+    0% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2) translateY(-2px);
+      opacity: 0.8;
+    }
+  }
